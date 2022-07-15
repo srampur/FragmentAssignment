@@ -13,6 +13,7 @@ import com.example.fragmentassignment.databinding.FragmentHomeBinding
  * create an instance of this fragment.
  */
 class HomeFragment : Fragment() {
+    lateinit var listener: onFragmentChangeListener
 
     private val errorMsg = "Please enter message."
     private val errorNumberMsg = "Please enter number."
@@ -34,8 +35,9 @@ class HomeFragment : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance() =
+        fun newInstance(_listener: onFragmentChangeListener) =
             HomeFragment().apply {
+                listener = _listener
             }
     }
 
@@ -47,10 +49,7 @@ class HomeFragment : Fragment() {
             } else {
                 binding.tilmessage.error = null
                 //send message to chat fragment
-                activity?.supportFragmentManager?.beginTransaction().let {
-                    it?.replace(binding.root.id, ChatFragment.newInstance())
-                    it?.commit()
-                }
+                listener.onFragmentChange(ChatFragment.newInstance())
             }
         }
 
@@ -60,11 +59,12 @@ class HomeFragment : Fragment() {
             } else {
                 binding.tilnumber.error = null
                 //send message to call fragment
-                activity?.supportFragmentManager?.beginTransaction().let {
-                    it?.replace(binding.root.id, CallFragment.newInstance())
-                    it?.commit()
-                }
+                listener.onFragmentChange(CallFragment.newInstance())
             }
         }
+    }
+
+    interface onFragmentChangeListener {
+        fun onFragmentChange(fragment: Fragment)
     }
 }

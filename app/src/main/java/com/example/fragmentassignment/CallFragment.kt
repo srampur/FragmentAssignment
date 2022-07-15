@@ -12,7 +12,6 @@ import android.view.ViewGroup
  * create an instance of this fragment.
  */
 class CallFragment : Fragment() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -30,7 +29,6 @@ class CallFragment : Fragment() {
         @JvmStatic
         fun newInstance() =
             CallFragment().apply {
-
             }
     }
 }

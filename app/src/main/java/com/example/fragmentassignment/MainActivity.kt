@@ -40,16 +40,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun validateUsernameAndPassword(): Boolean {
         var result = false
-        binding.tietusername.also {
-            if (it.text.isNullOrEmpty()) {
+        binding.tilusername.also {
+            if (binding.tietusername.text.isNullOrEmpty()) {
                 it.error = usernameErrorMsg
             } else {
                 it.error = null
             }
         }
 
-        binding.tietpassword.also {
-            if (it.text.isNullOrEmpty()) {
+        binding.tilpassword.also {
+            if (binding.tietpassword.text.isNullOrEmpty()) {
                 it.error = passwordErrorMsg
             } else {
                 it.error = null

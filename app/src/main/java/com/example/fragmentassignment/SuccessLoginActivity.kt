@@ -5,7 +5,8 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.fragmentassignment.databinding.ActivitySuccessLoginBinding
 
-class SuccessLoginActivity : AppCompatActivity() {
+class SuccessLoginActivity : AppCompatActivity(),
+    HomeFragment.onFragmentChangeListener {
 
     private lateinit var binding: ActivitySuccessLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +23,7 @@ class SuccessLoginActivity : AppCompatActivity() {
         }
 
         binding.home.setOnClickListener {
-            refreshFrameLayout(HomeFragment.newInstance())
+            refreshFrameLayout(HomeFragment.newInstance(this))
         }
 
         binding.settings.setOnClickListener {
@@ -35,5 +36,9 @@ class SuccessLoginActivity : AppCompatActivity() {
             replace(binding.framelayout.id, fragment)
             commit()
         }
+    }
+
+    override fun onFragmentChange(fragment: Fragment) {
+        refreshFrameLayout(fragment)
     }
 }
