@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <string name="title">Welcome!</string>
+    <string name="title1">Sign in to continue</string>
+    <string name="user_name">User name</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="or">-------------------- or --------------------</string>
+    <string name="social_media_login">Social Media Login</string>
+    <string name="signup_title">Don\'t have an account? Signup</string>
+    <string name="signup">Signup</string>
+    <string name="createdby">Created By Sid</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="chat_fragment">Chat fragment</string>
+    <string name="call_fragment">Call fragment</string>
+    <string name="home_fragment">Home fragment</string>
+    <string name="settings_fragment">Settings fragment</string>
+    <string name="chat">Chat</string>
+    <string name="call">Call</string>
+    <string name="home">Home</string>
+    <string name="settings">Settings</string>
+    <string name="enter_number">Enter number</string>
+    <string name="enter_message">Enter message</string>
+</resources>
