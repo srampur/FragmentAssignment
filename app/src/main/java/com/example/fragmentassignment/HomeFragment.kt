@@ -48,8 +48,10 @@ class HomeFragment : Fragment() {
                 binding.tilmessage.error = errorMsg
             } else {
                 binding.tilmessage.error = null
+                val number = binding.tietnumber.text.toString().toInt()
+                val msg = binding.tietmessage.text.toString()
                 //send message to chat fragment
-                listener.onFragmentChange(ChatFragment.newInstance())
+                listener.onFragmentChange(ChatFragment.newInstance(number, msg), binding.tietnumber.text.toString().toInt(), binding.tietmessage.text.toString())
             }
         }
 
@@ -58,13 +60,15 @@ class HomeFragment : Fragment() {
                 binding.tilnumber.error = errorNumberMsg
             } else {
                 binding.tilnumber.error = null
+                val number = binding.tietnumber.text.toString().toInt()
+                val msg = binding.tietmessage.text.toString()
                 //send message to call fragment
-                listener.onFragmentChange(CallFragment.newInstance())
+                listener.onFragmentChange(CallFragment.newInstance(number, msg), binding.tietnumber.text.toString().toInt(), binding.tietmessage.text.toString())
             }
         }
     }
 
     interface onFragmentChangeListener {
-        fun onFragmentChange(fragment: Fragment)
+        fun onFragmentChange(fragment: Fragment, number: Int, message: String)
     }
 }

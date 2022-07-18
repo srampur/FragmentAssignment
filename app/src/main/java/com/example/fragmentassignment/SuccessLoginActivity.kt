@@ -8,6 +8,9 @@ import com.example.fragmentassignment.databinding.ActivitySuccessLoginBinding
 class SuccessLoginActivity : AppCompatActivity(),
     HomeFragment.onFragmentChangeListener {
 
+    private var _message: String = ""
+    private var _number: Int = 0
+
     private lateinit var binding: ActivitySuccessLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,11 +18,11 @@ class SuccessLoginActivity : AppCompatActivity(),
         setContentView(binding.root)
 
         binding.btnchat.setOnClickListener {
-            refreshFrameLayout(ChatFragment.newInstance())
+            refreshFrameLayout(ChatFragment.newInstance(_number, _message))
         }
 
         binding.btncall.setOnClickListener {
-            refreshFrameLayout(CallFragment.newInstance())
+            refreshFrameLayout(CallFragment.newInstance(_number, _message))
         }
 
         binding.home.setOnClickListener {
@@ -38,7 +41,16 @@ class SuccessLoginActivity : AppCompatActivity(),
         }
     }
 
-    override fun onFragmentChange(fragment: Fragment) {
-        refreshFrameLayout(fragment)
+    private fun refreshFrameLayout(fragment: Fragment, number: Int, message: String) {
+        supportFragmentManager.beginTransaction().apply {
+            _number = number
+            _message = message
+            replace(binding.framelayout.id, fragment)
+            commit()
+        }
+    }
+
+    override fun onFragmentChange(fragment: Fragment, number: Int, message: String) {
+        refreshFrameLayout(fragment, number, message)
     }
 }

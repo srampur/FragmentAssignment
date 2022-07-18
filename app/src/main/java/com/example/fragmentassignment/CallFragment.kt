@@ -1,6 +1,7 @@
 package com.example.fragmentassignment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -27,8 +28,9 @@ class CallFragment : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance() =
+        fun newInstance(number: Int, message: String) =
             CallFragment().apply {
+                Log.e("TAG", "newInstance: n=$number, msg=$message" )
             }
     }
 }
