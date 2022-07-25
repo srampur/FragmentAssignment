@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             if (validationResult) {
                 successMsg += binding.tietusername.text
                 Toast.makeText(it.context, successMsg, Toast.LENGTH_LONG).show()
-                startActivity(Intent(it.context, SuccessLoginActivity::class.java))
+                startActivity(Intent(it.context, AssignmentsActivity::class.java))
             } else {
                 //Toast.makeText(it.context, "Please enter username and password.", Toast.LENGTH_LONG).show()
                 Snackbar.make(it, usernamePasswordErrorMsg, Snackbar.LENGTH_SHORT).show()

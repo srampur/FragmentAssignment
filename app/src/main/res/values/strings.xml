@@ -23,4 +23,17 @@
     <string name="settings">Settings</string>
     <string name="enter_number">Enter number</string>
     <string name="enter_message">Enter message</string>
+    <string name="ExFragCommunication">Fragment Communication Example</string>
+    <string name="ExSpinner">Spinner Example</string>
+    <string name="ExSpinnerTwo">Spinner Example 2</string>
+    <string name="ExSpinnerTwoEx">Ringtone Alarm Media Volume, Brightness</string>
+    <string name="ExRadioGroup">Radio group Example</string>
+    <string name="ExRatingBar">Rating Bar Example</string>
+    <string name="examples">Examples</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="simpleList">SimpleList view Example</string>
+    <string name="recyclerviewexample">Recycler View Examples</string>
+    <string name="menuexamples">Menu Examples</string>
+    <string name="imageloadexamples">Dynamic Image loading examples</string>
 </resources>
