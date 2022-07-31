@@ -36,4 +36,7 @@
     <string name="recyclerviewexample">Recycler View Examples</string>
     <string name="menuexamples">Menu Examples</string>
     <string name="imageloadexamples">Dynamic Image loading examples</string>
+    <string name="choose_country">Choose Country</string>
+    <string name="choose_state">Choose State</string>
+    <string name="choose_place">Choose Place</string>
 </resources>
