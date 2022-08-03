@@ -25,5 +25,15 @@ class AssignmentsActivity : AppCompatActivity() {
             Toast.makeText(it.context, binding.btnSpinnerExample.text, Toast.LENGTH_SHORT).show()
             startActivity(Intent(it.context, SpinnerExampleActivity::class.java))
         }
+
+        binding.btnRecyclerViewExamples.setOnClickListener {
+            Toast.makeText(it.context, binding.btnRecyclerViewExamples.text, Toast.LENGTH_SHORT).show()
+            startActivity(Intent(it.context, RecyclerViewExampleActivity::class.java))
+        }
+
+        binding.btnflightbooking.setOnClickListener {
+            Toast.makeText(it.context, binding.btnflightbooking.text, Toast.LENGTH_SHORT).show()
+            startActivity(Intent(it.context, FlightBookingExampleActivity::class.java))
+        }
     }
 }

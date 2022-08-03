@@ -39,4 +39,14 @@
     <string name="choose_country">Choose Country</string>
     <string name="choose_state">Choose State</string>
     <string name="choose_place">Choose Place</string>
+    <string name="bottomnavigtaion">Bottom navigation</string>
+    <string name="flightbooking">Flight booking</string>
+    <string name="flightbookingfrom">From </string>
+    <string name="flightbookingetfrom">"From Airport "</string>
+    <string name="flightbookingto">To </string>
+    <string name="flightbookingetTo">To Airport</string>
+    <string name="arrival_on">Arrival on</string>
+    <string name="btn_arrival_on">Arrival on</string>
+    <string name="rbone_way">One way</string>
+    <string name="rbround_trip">Round trip</string>
 </resources>

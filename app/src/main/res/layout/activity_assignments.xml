@@ -14,97 +14,122 @@
         android:textColor="#E68787"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnFragmentCommunicationExample"
+        app:layout_constraintBottom_toTopOf="@+id/svAssignments"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="spread_inside" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnFragmentCommunicationExample"
-        android:layout_width="409dp"
+    <ScrollView
+        android:id="@+id/svAssignments"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ExFragCommunication"
-        app:layout_constraintBottom_toTopOf="@+id/btnSpinnerExample"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvExampleSelection" />
+        app:layout_constraintTop_toBottomOf="@+id/tvExampleSelection">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnSpinnerExample"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:text="@string/ExSpinner"
-        app:layout_constraintBottom_toTopOf="@+id/btnRadioGroupExample"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFragmentCommunicationExample" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnRadioGroupExample"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:text="@string/ExRadioGroup"
-        app:layout_constraintBottom_toTopOf="@+id/btnRatingBarExample"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSpinnerExample" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFragmentCommunicationExample"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:text="@string/ExFragCommunication"
+                app:layout_constraintBottom_toTopOf="@+id/btnSpinnerExample"
+                app:layout_constraintEnd_toEndOf="@+id/btnSpinnerExample"
+                app:layout_constraintStart_toStartOf="@+id/btnSpinnerExample"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnRatingBarExample"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:text="@string/ExRatingBar"
-        app:layout_constraintBottom_toTopOf="@+id/btnSimpleList"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRadioGroupExample" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSpinnerExample"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:text="@string/ExSpinner"
+                app:layout_constraintBottom_toTopOf="@+id/btnRadioGroupExample"
+                app:layout_constraintEnd_toEndOf="@+id/btnRadioGroupExample"
+                app:layout_constraintStart_toStartOf="@+id/btnRadioGroupExample"
+                app:layout_constraintTop_toBottomOf="@+id/btnFragmentCommunicationExample" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnSimpleList"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:text="@string/simpleList"
-        app:layout_constraintBottom_toTopOf="@+id/btnRecyclerViewExamples"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRatingBarExample" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRadioGroupExample"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:text="@string/ExRadioGroup"
+                app:layout_constraintBottom_toTopOf="@+id/btnRatingBarExample"
+                app:layout_constraintEnd_toEndOf="@+id/btnRatingBarExample"
+                app:layout_constraintStart_toStartOf="@+id/btnRatingBarExample"
+                app:layout_constraintTop_toBottomOf="@+id/btnSpinnerExample" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnRecyclerViewExamples"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:text="@string/recyclerviewexample"
-        app:layout_constraintBottom_toTopOf="@+id/btnmenuexamples"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSimpleList" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRatingBarExample"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:text="@string/ExRatingBar"
+                app:layout_constraintBottom_toTopOf="@+id/btnSimpleList"
+                app:layout_constraintEnd_toEndOf="@+id/btnSimpleList"
+                app:layout_constraintStart_toStartOf="@+id/btnSimpleList"
+                app:layout_constraintTop_toBottomOf="@+id/btnRadioGroupExample" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnmenuexamples"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:text="@string/menuexamples"
-        app:layout_constraintBottom_toTopOf="@+id/btnimageloader"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRecyclerViewExamples" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSimpleList"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:text="@string/simpleList"
+                app:layout_constraintBottom_toTopOf="@+id/btnRecyclerViewExamples"
+                app:layout_constraintEnd_toEndOf="@+id/btnRecyclerViewExamples"
+                app:layout_constraintStart_toStartOf="@+id/btnRecyclerViewExamples"
+                app:layout_constraintTop_toBottomOf="@+id/btnRatingBarExample" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnimageloader"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:text="@string/imageloadexamples"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnmenuexamples" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRecyclerViewExamples"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:text="@string/recyclerviewexample"
+                app:layout_constraintBottom_toTopOf="@+id/btnmenuexamples"
+                app:layout_constraintEnd_toEndOf="@+id/btnmenuexamples"
+                app:layout_constraintStart_toStartOf="@+id/btnmenuexamples"
+                app:layout_constraintTop_toBottomOf="@+id/btnSimpleList" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnmenuexamples"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:text="@string/menuexamples"
+                app:layout_constraintBottom_toTopOf="@+id/btnimageloader"
+                app:layout_constraintEnd_toEndOf="@+id/btnimageloader"
+                app:layout_constraintStart_toStartOf="@+id/btnimageloader"
+                app:layout_constraintTop_toBottomOf="@+id/btnRecyclerViewExamples" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnimageloader"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:text="@string/imageloadexamples"
+                app:layout_constraintBottom_toTopOf="@+id/btnbottomnavigation"
+                app:layout_constraintEnd_toEndOf="@+id/btnbottomnavigation"
+                app:layout_constraintStart_toStartOf="@+id/btnbottomnavigation"
+                app:layout_constraintTop_toBottomOf="@+id/btnmenuexamples" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnbottomnavigation"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:text="@string/bottomnavigtaion"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnimageloader" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnflightbooking"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:text="@string/flightbooking"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnbottomnavigation" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
